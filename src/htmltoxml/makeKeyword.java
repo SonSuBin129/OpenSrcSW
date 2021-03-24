@@ -30,7 +30,7 @@ import org.xml.sax.SAXException;
 
 public class makeKeyword {
 	
-	void extract(String path) throws ParserConfigurationException, SAXException, IOException, TransformerException {
+	static void extract(String path) throws ParserConfigurationException, SAXException, IOException, TransformerException {
 		
 		File file= new File(path);
 		

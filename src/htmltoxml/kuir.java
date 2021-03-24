@@ -11,12 +11,14 @@ public class kuir {
 
 	public static void main(String[] args) throws SAXException {
 		// TODO Auto-generated method stub
-		makeCollection mc= new makeCollection();
-		makeKeyword mk= new makeKeyword();
+		
 		try {
-			mc.Change("C:\\Users\\손수빈\\SimpleIR\\src\\html");
-			mk.extract("C:\\Users\\손수빈\\SimpleIR\\collection.xml");
+			makeCollection.Change(args[1]);
+			makeKeyword.extract(args[3]);
 		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -26,6 +28,24 @@ public class kuir {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+//		makeCollection mc= new makeCollection();
+//		makeKeyword mk= new makeKeyword();
+//		try {
+//			mc.Change(args[1]);
+//			mk.extract(args[3]);
+//		} catch (ParserConfigurationException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (TransformerException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+	
 	}
 
 }

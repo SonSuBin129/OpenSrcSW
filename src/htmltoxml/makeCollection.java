@@ -24,7 +24,7 @@ import org.w3c.dom.Element;
 public class makeCollection {
 
 	
-	void Change(String path) throws ParserConfigurationException, IOException, TransformerException {
+	static void Change(String path) throws ParserConfigurationException, IOException, TransformerException {
 		
 		File dir= new File(path);
 		File[] fileList= dir.listFiles();
