@@ -28,23 +28,6 @@ public class kuir {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-//		makeCollection mc= new makeCollection();
-//		makeKeyword mk= new makeKeyword();
-//		try {
-//			mc.Change(args[1]);
-//			mk.extract(args[3]);
-//		} catch (ParserConfigurationException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (TransformerException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
 	
 	}
 
