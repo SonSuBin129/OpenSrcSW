@@ -14,17 +14,19 @@ public class kuir {
 		
 		try {
 			makeCollection.Change(args[1]);
+		} catch (ParserConfigurationException | IOException | TransformerException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
 			makeKeyword.extract(args[3]);
-		} catch (ParserConfigurationException e) {
+		} catch (ParserConfigurationException | SAXException | IOException | TransformerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (SAXException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (TransformerException e) {
+		}
+		try {
+			indexer.inverted(args[5]);
+		} catch (TransformerException | ParserConfigurationException | SAXException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
