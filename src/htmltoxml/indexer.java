@@ -25,7 +25,7 @@ public class indexer {
 	
 	static void inverted(String path) throws TransformerException, ParserConfigurationException, SAXException, IOException {
 		
-		final int N=5;
+		int N=5;
 		File file= new File(path);
 		
 		DocumentBuilderFactory docFactory= DocumentBuilderFactory.newInstance();
@@ -46,7 +46,7 @@ public class indexer {
 			String test=body.getTextContent();
 			strlist[i]=test.split("#");
 		}
-		
+
 		for(int i=0;i<strlist.length;i++) {
 			for(int j=0;j<strlist[i].length;j++) {
 				String[] a=strlist[i][j].split(":");
@@ -54,7 +54,7 @@ public class indexer {
 				int tfnum=Integer.valueOf(a[1]);
 				int dfnum=makedf(strlist,target);
 				double origin=tfnum*Math.log(N/dfnum);
-				double weight=Math.round(origin*100)/100.0;	//소수점 두번째 자리까지 표현(소수점 세번째 자리에서 반올림) 
+				double weight=Math.round(origin*100)/100.0;	//소수점 두번째 자리까지 표현(소수점 세번째 자리에서 반올림)
 				makeHashmap(target,weight,i,invert);	//hashmap.put하기 위해서
 			}
 		}
@@ -68,19 +68,16 @@ public class indexer {
 	
 	static int makedf(String[][] strlist, String target) {	//df구하는 함수
 		int df=0; //target인 단어가 있는 문서부터 다시 검토할거기 때문에 아예 초기화하고 생각
-		
 		for(int i=0;i<strlist.length;i++) {
-			boolean condition=false;
 			for(int j=0;j<strlist[i].length;j++) {
-				String check= strlist[i][j];
-				if(check.contains(target)) {
-					condition=true;
+				String origin= strlist[i][j];
+				String[] check=strlist[i][j].split(":");
+				if(target.equals(check[0])) {
+					df++;
 				}
 			}
-			if(condition==true) {
-				df++;
-			}
 		}
+		
 		return df;
 	}
 	
