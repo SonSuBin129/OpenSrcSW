@@ -31,6 +31,15 @@ public class kuir {
 			e.printStackTrace();
 		}
 	
+		
+		searcher sc= new searcher();
+		try {
+			sc.CalcSim(args[7], args[9]);
+		} catch (ClassNotFoundException | IOException | SAXException | ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 }
