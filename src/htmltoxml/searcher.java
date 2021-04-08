@@ -81,8 +81,8 @@ public class searcher {
 				}
 			}
 		}
-		
-		System.out.println("========================문서별 유사도 출력========================");
+
+		System.out.println("========================문서별 유사도========================");
 		for(int i=0;i<result.length;i++) {//소수점 둘째 자리까지 표현
 			result[i]=Math.round(result[i]*100)/100.0;
 			System.out.println("\""+title[i]+"\" 의 유사도 : "+result[i]);
@@ -92,7 +92,6 @@ public class searcher {
 		///////////상위3위 문서 title 출력////////////
 		double max=0;
 		int index;//큰 값을 가지는 인덱스를 저장할 변수
-		
 		System.out.println("========================유사도 상위 3위까지 출력========================");
 		for(int i=0;i<3;i++) {
 			max=result[0];
@@ -110,6 +109,7 @@ public class searcher {
 			}
 			System.out.println((i+1)+"위 : "+title[index]+" => 유사도 : "+result[index]);
 			result[index]=Integer.MIN_VALUE;
+			
 		}
 	}
 }
