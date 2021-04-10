@@ -30,8 +30,7 @@ public class kuir {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
-		
+
 		searcher sc= new searcher();
 		try {
 			sc.CalcSim(args[7], args[9]);
@@ -39,7 +38,5 @@ public class kuir {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
-
 }

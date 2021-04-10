@@ -33,7 +33,6 @@ public class makeKeyword {
 	static void extract(String path) throws ParserConfigurationException, SAXException, IOException, TransformerException {
 		
 		File file= new File(path);
-		
 		DocumentBuilderFactory docFactory= DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder= docFactory.newDocumentBuilder();
 		Document doc= builder.parse(file);

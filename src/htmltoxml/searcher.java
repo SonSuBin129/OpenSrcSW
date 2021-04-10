@@ -65,6 +65,7 @@ public class searcher {
 			for(int j=0;j<value.size();j+=2) {
 				int target=(int)value.get(j);
 				double tf=(double)value.get(j+1);	// 문서별 tf-idf
+
 				switch(target) {
 				case 0:
 					result[0]+=weight*tf;
@@ -93,7 +94,8 @@ public class searcher {
 		for(int i=0;i<result.length;i++) {//소수점 둘째 자리까지 표현, 코사인 유사도 계산
 			double origin=Math.round(result[i]*100)/100.0;
 			result[i]=Math.round((origin/(Ql*idl))*100)/100.0;
-		}
+			}
+
 		
 		
 		///////////상위3위 문서 title 출력////////////
@@ -120,4 +122,3 @@ public class searcher {
 		}
 	}
 }
-
