@@ -23,6 +23,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 
+
 public class searcher {
 	void CalcSim(String path, String query) throws IOException, ClassNotFoundException, SAXException, ParserConfigurationException {
 		File file= new File(path);
