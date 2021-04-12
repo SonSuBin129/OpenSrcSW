@@ -96,12 +96,12 @@ public class searcher {
 			double origin=Math.round(result[i]*100)/100.0;
 			result[i]=Math.round((origin/(Ql*idl))*100)/100.0;
 			}
-
-		
 		
 		///////////상위3위 문서 title 출력////////////
 		double max=0;
 		int index;//큰 값을 가지는 인덱스를 저장할 변수
+		double[] large= new double[3];	//return 할 유사도 큰 값
+		String[] large_title=new String[3];	//
 		System.out.println("========================유사도 상위 3위까지 출력========================");
 		for(int i=0;i<3;i++) {
 			max=result[0];
@@ -117,7 +117,8 @@ public class searcher {
 					}
 				}
 			}
-			System.out.println((i+1)+"위 : "+title[index]+" => 유사도 : "+result[index]);
+			large[i]=result[index];
+			large_title[i]=title[index];
 			result[index]=Integer.MIN_VALUE;
 			
 		}
