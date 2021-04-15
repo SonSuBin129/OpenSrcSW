@@ -24,10 +24,12 @@ import org.xml.sax.SAXException;
 
 
 public class searcher {
+	
 	void InnerProduct(String path, String query) throws IOException, ClassNotFoundException, SAXException, ParserConfigurationException {
 		File file= new File(path);
 		FileInputStream fileStream= new FileInputStream(file);
 		ObjectInputStream objectInputStream= new ObjectInputStream(fileStream);
+		
 		
 		Object object= objectInputStream.readObject();
 		objectInputStream.close();
