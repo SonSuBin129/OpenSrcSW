@@ -1,8 +1,9 @@
 #실습 7번: wc
 
-import sys
+userinput=input("입력: ")
+li_input=userinput.split()
 
-f1=open(sys.argv[1],'r')
+f1=open(li_input[1],'r')
 
 #file1은 실습6번에서 만들어진 file1을 이용했습니다.
 

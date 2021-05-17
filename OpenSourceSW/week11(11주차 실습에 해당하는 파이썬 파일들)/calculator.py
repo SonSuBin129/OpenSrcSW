@@ -23,7 +23,6 @@ def calc(OP,Num):
     op=OP.pop()
     n2=Num.pop()
     n1=Num.pop()
-    print("{0:d}, {1:d}".format(n1,n2))
     if op=='+':
         Num.push(n1+n2)
     elif op=='-':
