@@ -14,7 +14,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
  
-public class Main {
+public class Week15 {
  
     public static void main(String[] args) throws ParseException {
         String clientId = "IqtWM3oSNWpDiTOg0fvh"; //애플리케이션 클라이언트 아이디값"
